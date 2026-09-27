@@ -1,5 +1,5 @@
 <?php
-//ini non-embeded script
+//ini non-embedded script
 echo "Hello World"."<br>";
  ?>
  

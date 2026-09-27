@@ -4,6 +4,4 @@ $a = "I Love ";
 $b = " !";
 
 echo $a.$txt.$b;
-
-
  ?>
