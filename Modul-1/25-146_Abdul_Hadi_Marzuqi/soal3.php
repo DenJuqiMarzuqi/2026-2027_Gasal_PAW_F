@@ -1,0 +1,19 @@
+<?php
+//ini non-embeded script
+echo "Hello World"."<br>";
+ ?>
+ 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>embeded script</title>
+</head>
+<body>
+<?php 
+//ini embedded script
+echo "Hello World";
+ ?>
+</body>
+</html>
