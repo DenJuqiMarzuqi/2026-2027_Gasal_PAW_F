@@ -1,4 +1,5 @@
 <?php
+// Soal 2
 $matkul = ["PTI","ALPRO","DPW","STRUKDAT","JARKOM","PAW","PSBF","RPL"];
 echo "<b>Jawaban Soal 2 :</b><br>";
 foreach($matkul as $key => $value){
