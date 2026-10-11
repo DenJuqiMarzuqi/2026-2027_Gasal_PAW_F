@@ -31,11 +31,7 @@ echo "<br>";
 $i = 0;
 echo "fruit = ( ";
 foreach($fruits as $fruit    => $value){
-    echo '"'.$value.'"';  
-    $i++;
-    if ($i < count($fruits)){
-        echo ", ";
-    }
+        echo '"'.$value.'"'.","." ";     
 }
 echo ")";
 echo "<br>";
