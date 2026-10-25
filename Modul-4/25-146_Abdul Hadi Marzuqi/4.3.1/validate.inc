@@ -1,10 +1,10 @@
 <?php
-// Langkah 1-3
+//Langkah 1-3
 //function validateName($field_list, $field_name){ 
 //    if (!isset($field_list[$field_name]))
-//        return false;
+//       return false;
 //    $pattern = "/^[a-zA-Z'-]+$/"; // format nama (alfabet)
-//    if (!preg_match($pattern, $field_list[$field_name]))
+//   if (!preg_match($pattern, $field_list[$field_name]))
 //        return false;
 //    return true;
 // }
