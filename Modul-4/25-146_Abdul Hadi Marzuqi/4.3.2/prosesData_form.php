@@ -37,6 +37,11 @@
             flex-shrink: 100;
         }
 
+        input[type = submit], input[type = reset]{
+            padding: 5px 14px;
+            margin-right : 10px;
+        }
+
     </style>
 </head>
 <body>
