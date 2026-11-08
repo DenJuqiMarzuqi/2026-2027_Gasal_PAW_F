@@ -1,4 +1,4 @@
-<?php include 'TP5-koneksi.php'; ?>
+<?php require_once __DIR__ .'/TP5-koneksi.php'; ?>
 <link rel="stylesheet" href="style.css">
 
 <div class="container">

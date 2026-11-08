@@ -1,5 +1,5 @@
 <?php
-include 'TP5-koneksi.php';
+require_once __DIR__ .'/TP5-koneksi.php';
 
 if (isset($_POST['simpan'])) {
     $nama   = $_POST['nama'];

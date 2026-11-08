@@ -1,5 +1,5 @@
 <?php
-include 'TP5-koneksi.php';
+require_once __DIR__ .'/TP5-koneksi.php';
 
 $id = $_GET['id'];
 
