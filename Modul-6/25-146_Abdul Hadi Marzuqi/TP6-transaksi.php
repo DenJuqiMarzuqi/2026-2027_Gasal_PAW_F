@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/koneksi.php';
+require_once __DIR__.'/TP6-koneksi.php';
 
 $data = mysqli_query($conn,"SELECT t.id, t.waktu_transaksi, t.keterangan, t.total, p.nama AS pelanggan FROM transaksi t LEFT JOIN pelanggan p ON t.pelanggan_id = p.id ORDER BY t.id");
 ?>
