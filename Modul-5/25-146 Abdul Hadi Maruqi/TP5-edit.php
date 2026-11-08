@@ -8,11 +8,11 @@ if (isset($_POST['update'])) {
     $telp   = $_POST['telp'];
     $alamat = $_POST['alamat'];
 
-    mysqli_query($koneksi, "UPDATE supplier SET nama='$nama', telp='$telp', alamat='$alamat' WHERE id='$id'");
+    mysqli_query($conn, "UPDATE supplier SET nama='$nama', telp='$telp', alamat='$alamat' WHERE id='$id'");
     header("Location: TP5-main.php");
 }
 
-$query = mysqli_query($koneksi, "SELECT * FROM supplier WHERE id='$id'");
+$query = mysqli_query($conn, "SELECT * FROM supplier WHERE id='$id'");
 $row = mysqli_fetch_array($query);
 ?>
 <link rel="stylesheet" href="style.css">

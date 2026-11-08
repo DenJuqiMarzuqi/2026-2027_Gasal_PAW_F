@@ -6,7 +6,7 @@ if (isset($_POST['simpan'])) {
     $telp   = $_POST['telp'];
     $alamat = $_POST['alamat'];
 
-    mysqli_query($koneksi, "INSERT INTO supplier (nama, telp, alamat) VALUES ('$nama', '$telp', '$alamat')");
+    mysqli_query($conn, "INSERT INTO supplier (nama, telp, alamat) VALUES ('$nama', '$telp', '$alamat')");
     header("Location: TP5-main.php");
 }
 ?>

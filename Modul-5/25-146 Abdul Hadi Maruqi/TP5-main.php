@@ -18,7 +18,7 @@
 
         <?php
         $no = 1;
-        $query = mysqli_query($koneksi, "SELECT * FROM supplier");
+        $query = mysqli_query($conn, "SELECT * FROM supplier");
         while ($row = mysqli_fetch_array($query)) {
         ?>
         <tr>
