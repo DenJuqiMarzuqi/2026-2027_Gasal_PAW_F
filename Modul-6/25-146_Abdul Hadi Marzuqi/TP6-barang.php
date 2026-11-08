@@ -7,7 +7,6 @@ $jenis = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['hapus_id'])) {
     $hapus_id = (int)$_POST['hapus_id'];
-
     $stmt = mysqli_prepare($conn,
       "SELECT COUNT(*) AS jumlah FROM transaksi_detail WHERE barang_id = ?");
     mysqli_stmt_bind_param($stmt, "i", $hapus_id);
