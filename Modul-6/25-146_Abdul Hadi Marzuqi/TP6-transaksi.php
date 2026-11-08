@@ -11,7 +11,7 @@ $data = mysqli_query($conn,"SELECT t.id, t.waktu_transaksi, t.keterangan, t.tota
 </head>
 <body>
   <h1>Daftar Transaksi</h1>
-  <p><a href="barang.php">Ke Data Barang</a></p>
+  <p><a href="TP6-barang.php">Ke Data Barang</a></p>
 
   <table border="1" cellpadding="10" cellspacing="0">
     <tr>
@@ -28,7 +28,7 @@ $data = mysqli_query($conn,"SELECT t.id, t.waktu_transaksi, t.keterangan, t.tota
       <td><?= e ($r['pelanggan']) ?></td>
       <td><?= e ($r['keterangan']) ?></td>
       <td>Rp <?= number_format($r['total'], 0, ',', '.') ?></td>
-      <td><a href="transaksi_detail.php?id=<?= $r['id'] ?>">Detail</a></td>
+      <td><a href="TP6-transaksi_detail.php?id=<?= $r['id'] ?>">Detail</a></td>
     </tr>
     <?php } ?>
   </table>

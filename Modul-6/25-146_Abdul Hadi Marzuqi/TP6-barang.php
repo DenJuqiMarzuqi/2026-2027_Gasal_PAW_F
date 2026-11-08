@@ -41,7 +41,7 @@ $data = mysqli_query($conn,
 </head>
 <body>
   <h1>Data Barang</h1>
-  <p><a href="transaksi.php">Ke Transaksi</a></p>
+  <p><a href="TP6-transaksi.php">Ke Transaksi</a></p>
 
   <?php if ($pesan) { ?>
     <div class="<?= $jenis ?>"><?= e($pesan) ?></div>

@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
         }
     }
-    header("Location: transaksi_detail.php?id=$id");
+    header("Location: TP6-transaksi_detail.php?id=$id");
     exit;
 }
 
@@ -52,7 +52,7 @@ mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
 $master = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
 if (!$master) {
-    die("Transaksi tidak ditemukan. <a href='transaksi.php'>Kembali</a>");
+    die("Transaksi tidak ditemukan. <a href='TP6-transaksi.php'>Kembali</a>");
 }
 
 
@@ -80,7 +80,7 @@ $pilihan = mysqli_stmt_get_result($stmt);
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p><a href="transaksi.php">&lt; Kembali</a></p>
+  <p><a href="TP6-transaksi.php">&lt; Kembali</a></p>
 
   <h2>Data Transaksi (Master)</h2>
   <div class="box">
