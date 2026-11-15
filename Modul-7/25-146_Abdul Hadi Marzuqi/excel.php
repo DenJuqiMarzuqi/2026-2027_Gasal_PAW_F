@@ -22,7 +22,7 @@ mysqli_stmt_bind_param($stmt, "ss", $mulai, $batas);
 mysqli_stmt_execute($stmt);
 $hasil = mysqli_stmt_get_result($stmt);
 
-// Query 2: ringkasan
+
 $sql2 = "SELECT COUNT(DISTINCT pelanggan_id) AS jml_pelanggan,
                 SUM(total) AS total_pendapatan
          FROM transaksi
