@@ -4,14 +4,14 @@ require_once __DIR__ . "/koneksi.php";
 $mulai   = $_GET['tanggal_mulai']   ?? '';
 $selesai = $_GET['tanggal_selesai'] ?? '';
 
-// Validasi sederhana
+
 if ($mulai === '' || $selesai === '' || $mulai > $selesai) {
     die('Rentang tanggal tidak valid.');
 }
 
 $batas = date('Y-m-d', strtotime($selesai . ' +1 day'));
 
-// Query 1: rekap per hari
+
 $sql = "SELECT DATE(waktu_transaksi) AS tgl, SUM(total) AS total_harian
         FROM transaksi
         WHERE waktu_transaksi >= ? AND waktu_transaksi < ?
@@ -32,7 +32,7 @@ mysqli_stmt_bind_param($stmt2, "ss", $mulai, $batas);
 mysqli_stmt_execute($stmt2);
 $ringkasan = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt2));
 
-// Header HTTP: HARUS sebelum output apa pun
+
 header("Content-Type: application/vnd.ms-excel");
 header("Content-Disposition: attachment; filename=rekap_penjualan_{$mulai}_sd_{$selesai}.xls");
 ?>
