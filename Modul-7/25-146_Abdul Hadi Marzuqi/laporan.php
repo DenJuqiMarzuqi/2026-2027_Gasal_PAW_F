@@ -14,7 +14,7 @@ if ($sudah_filter) {
     } else {
         $batas = date('Y-m-d', strtotime($selesai . ' +1 day'));
 
-        // Query 1: total per hari
+        
         $sql = "SELECT DATE(waktu_transaksi) AS tgl, SUM(total) AS total_harian
                 FROM transaksi
                 WHERE waktu_transaksi >= ? AND waktu_transaksi < ?
@@ -28,7 +28,6 @@ if ($sudah_filter) {
             $rekap[] = $r;
         }
 
-        // Query 2: ringkasan (dipindah ke DALAM else)
         $sql2 = "SELECT COUNT(DISTINCT pelanggan_id) AS jml_pelanggan,
                         SUM(total) AS total_pendapatan
                  FROM transaksi
@@ -40,7 +39,7 @@ if ($sudah_filter) {
     }
 }
 
-// Data untuk grafik: pisahkan jadi 2 array
+
 $labels = array_column($rekap, 'tgl');
 $nilai  = array_map('intval', array_column($rekap, 'total_harian'));
 ?>
