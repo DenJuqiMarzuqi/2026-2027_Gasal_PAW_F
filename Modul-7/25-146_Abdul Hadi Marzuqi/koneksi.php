@@ -8,20 +8,4 @@ if (!$conn){
     die("Koneksi Error".mysqli_connect_error());
 }
 echo "";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
